@@ -1,9 +1,19 @@
-// importando o express
-const express = require('express');
+// Módulo de configuração do app
+const express = require ('express');
 
-//criando um objeto express na variável app
 const app = express();
-//Definimos o EJS como motor  de views
-app.set('view engine', 'ejs')
-// Definimos o caminho par os nossos arquivos estaticos
-app.use(express.static('./views/public'))
+
+//Configuraçâo do jsonparse e bodyparse
+app.use(express.json());
+app.use(express.urlencoded({extended: true}))
+
+// definido o motor de views como sendo EJS
+app.set('view engine','ejs')
+
+// configurar o caminho da pasta views
+app.set('views', './app/views') // app/views
+
+//configuração de arquivos estáticos
+app.use(express.static('./app/public')) // app/public 
+
+module.exports = app

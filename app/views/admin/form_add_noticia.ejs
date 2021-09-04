@@ -1,0 +1,40 @@
+<!-- Importação do header.ejs  -->
+<%- include('../common/header') %>
+    <!-- ------------------------------------------------------- -->
+
+
+    <!-- importação do menu.ejs  -->
+    <%- include('../common/menu') %>
+
+        <!-- ------------------------------------------------------- -->
+
+        <main class="mb-4">
+            <div class="bg-light p-5 mb-4">
+                <div class="container">
+                    <h1>Nova Notícia</h1>
+                </div>
+            </div>
+
+            <div class="container">
+                <form action="/admin/salvar-noticia" method="post">
+                    <div class="mb-3">
+                        <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Título da Notícia" autocomplete="off" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="conteudo" class="form-label">Conteúdo</label>
+                        <textarea class = "form-control" name= "conteudo" cols="30" rows="5" style ="resize:none;"></textarea>
+                    </div>
+
+                    <input type="submit" value = "Criar" class="btn btn-primary btn-lg w-100" >
+
+                </form>
+
+            </div>
+
+        </main>
+
+        <!-- ------------------------------------------------------- -->
+
+        <!-- importacao do footer.ejs  -->
+        <%- include('../common/footer') %>

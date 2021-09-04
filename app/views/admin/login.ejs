@@ -1,0 +1,33 @@
+<!-- Importação do header.ejs  -->
+<%- include('../common/header') %>
+    <!-- ------------------------------------------------------- -->
+
+
+    <!-- importação do menu.ejs  -->
+    <%- include('../common/menu') %>
+
+        <!-- ------------------------------------------------------- -->
+
+        <main class="form-signin mb-4">
+            <form action="/admin/autenticar" method="post">
+                <h1 class = "mb-3 text-center">Login</h1>
+
+                <div class="form-floating">
+                    <input type="text" name = "usuario" class="form-control" id="usuario" placeholder="Usuário" autocomplete="off" required>
+                    <label for="usuario">Usuário</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="password" name = "senha" class="form-control" id="senha" placeholder="Senha" autocomplete="off" required>
+                    <label for="senha">Senha</label>
+                </div>
+
+                <button class="btn btn-lg btn-primary" type="submit">Entrar</button>
+            </form>
+
+        </main>
+
+        <!-- ------------------------------------------------------- -->
+
+        <!-- importacao do footer.ejs  -->
+        <%- include('../common/footer') %>
