@@ -12,10 +12,10 @@ app.get('/', (req, res) => {
 
 })
 
-//rota Noticias
-app.get('/noticias', (req, res) => {
+//rota Noticia
+app.get('/noticia', (req, res) => {
    // res.send('<h1>Todas as noticias cabulosas de Tecnologia </h1>')
-    res.render('noticias/noticias', {noticias:noticias})
+    res.render('noticias/noticia', {noticias:noticia})
 })
 
 //rota Noticia 
